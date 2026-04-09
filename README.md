@@ -10,14 +10,12 @@
 1. [Project Overview](#-project-overview)
 2. [Business Objective](#-business-objective)
 3. [Dataset Description](#-dataset-description)
-4. [Project Structure](#-project-structure)
-5. [Methodology](#-methodology)
-6. [Results & Cluster Profiles](#-results--cluster-profiles)
-7. [Model Comparison](#-model-comparison)
-8. [Key Findings](#-key-findings)
-9. [Streamlit Application](#-streamlit-application)
-10. [How to Run](#-how-to-run)
-11. [Requirements](#-requirements)
+4. [Methodology](#-methodology)
+5. [Results & Cluster Profiles](#-results--cluster-profiles)
+6. [Model Comparison](#-model-comparison)
+7. [Streamlit Application](#-streamlit-application)
+8. [How to Run](#-how-to-run)
+9. [Requirements](#-requirements)
 
 ---
 
