@@ -1,4 +1,4 @@
-# 🧬 Clustering Individuals Based on Eating Habits and Physical Condition
+# 🧬 Clustering Individuals Based on Eating Habits and Lifestyle
 
 > **Unsupervised Machine Learning — Lifestyle Segmentation Project**  
 > UCI Obesity Dataset · KMeans · Hierarchical Clustering · DBSCAN · Streamlit
