@@ -33,9 +33,7 @@ The obesity labels (`NObeyesdad`) are used **only after clustering** to validate
 |---|---|
 | **Business Goal** | Understand distinct lifestyle and eating behavior patterns associated with obesity risk |
 | **Technical Goal** | Apply clustering algorithms (KMeans, Hierarchical, DBSCAN) to segment individuals |
-| **Key Question** | *Can we identify distinct lifestyle profiles from behavioral data alone  without using obesity labels?*
-*What eating and activity patterns characterize different population segments?*
-|
+| **Key Question** | *Can we identify distinct lifestyle profiles from behavioral data alone  without using obesity labels?*|
 
 **Why this matters:**
 - Enables targeted health interventions for specific lifestyle groups
