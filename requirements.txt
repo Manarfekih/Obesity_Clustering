@@ -1,0 +1,30 @@
+Bottleneck @ file:///C:/miniconda3/conda-bld/bottleneck_1761938096667/work
+contourpy @ file:///C:/b/abs_f2u2o_8s9g/croot/contourpy_1732540071787/work
+cycler @ file:///C:/Users/task_176606795043471/croot/cycler_1766068055428/work
+fonttools @ file:///C:/Users/task_177425652242231/croot/fonttools_1774256597804/work
+joblib @ file:///C:/Users/task_176786734930694/croot/joblib_1767868144277/work
+kiwisolver @ file:///C:/miniconda3/conda-bld/kiwisolver_1764159353779/work
+matplotlib==3.10.8
+mkl-service==2.5.2
+mkl_fft @ file:///C:/miniconda3/conda-bld/mkl_fft_1761592981169/work
+mkl_random @ file:///C:/miniconda3/conda-bld/mkl_random_1761593075610/work
+numexpr @ file:///C:/miniconda3/conda-bld/numexpr_1762165723970/work
+numpy @ file:///C:/miniconda3/conda-bld/numpy_and_numpy_base_1761579405538/work/dist/numpy-2.2.5-cp310-cp310-win_amd64.whl#sha256=074bffd27eaf24d54337a4bac76b167c7d794ddb6a813f6fa3fb37c91af766a8
+packaging @ file:///C:/miniconda3/conda-bld/packaging_1761049101700/work
+pandas @ file:///C:/miniconda3/conda-bld/pandas_1762332399653/work/dist/pandas-2.3.3-cp310-cp310-win_amd64.whl#sha256=25368e0adc93a7db0f3983502b4e57344f71af8f45ca3849f7c3833738f306aa
+pillow @ file:///C:/b/abs_b50vowcrzo/croot/pillow_1738010273782/work
+pyparsing @ file:///C:/miniconda3/conda-bld/pyparsing_1763973898118/work
+PyQt6==6.10.2
+PyQt6_sip @ file:///C:/Users/task_177247652562887/croot/pyqt-split_1772477410288/work/pyqt_sip
+python-dateutil @ file:///C:/b/abs_3au_koqnbs/croot/python-dateutil_1716495777160/work
+pytz @ file:///C:/Users/task_177304302224694/croot/pytz_1773043111941/work
+scikit-learn @ file:///C:/b/abs_45qemhn4lg/croot/scikit-learn_1753427401078/work
+scipy @ file:///C:/miniconda3/conda-bld/scipy_1759222090244/work/dist/scipy-1.15.3-cp310-cp310-win_amd64.whl#sha256=2c02ce5f7bc108a9dd2298fac421e55898c14864219396421ffe00419ec8c736
+seaborn @ file:///C:/b/abs_0bv5x0ucxb/croot/seaborn_1749110315600/work
+sip @ file:///C:/Users/task_177080700866195/croot/sip_1770807604859/work
+six @ file:///C:/b/abs_149wuyuo1o/croot/six_1744271521515/work
+threadpoolctl @ file:///C:/miniconda3/conda-bld/threadpoolctl_1764361785970/work
+tomli @ file:///C:/Users/task_176829653256119/croot/tomli_1768296653758/work
+tornado @ file:///C:/Users/task_177430356365515/croot/tornado_1774303657186/work
+tzdata @ file:///home/task_176829656558347/croot/python-tzdata_1768296637279/work
+streamlit>=1.35.0

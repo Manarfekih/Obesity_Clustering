@@ -1,0 +1,72 @@
+/* Base font & background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F8F7F4;
+    color: #333;
+}
+
+/* Metric cards */
+.metric-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+    transition: transform 0.2s;
+}
+.metric-card:hover {
+    transform: translateY(-4px);
+}
+.metric-card .label {
+    font-size: 0.85rem;
+    color: #777;
+}
+.metric-card .value {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 4px;
+}
+.metric-card .sub {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+/* Cluster cards */
+.cluster-card {
+    padding: 14px 12px;
+    border-left: 5px solid;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.cluster-card h4 {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+}
+.cluster-card p {
+    margin: 2px 0;
+    font-size: 0.85rem;
+}
+
+/* Prediction result */
+.predict-result {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 16px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+.predict-result h2 {
+    margin: 0 0 8px 0;
+    font-size: 1.3rem;
+}
+.predict-result p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Streamlit tabs & plots */
+[data-baseweb="tab"] {
+    font-weight: 600;
+}
