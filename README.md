@@ -1,4 +1,4 @@
-# 🧬 Clustering Individuals Based on Eating Habits and Lifestyle
+# 🧬 Clustering Individuals Based on Eating Habits and Lifestyles
 
 > **Unsupervised Machine Learning — Lifestyle Segmentation Project**  
 > UCI Obesity Dataset · KMeans · Hierarchical Clustering · DBSCAN · Streamlit
@@ -23,7 +23,7 @@
 
 ## 🔍 Project Overview
 
-This project applies **unsupervised machine learning** to discover hidden lifestyle profiles within a population dataset of 2,103 individuals. Rather than predicting obesity labels (a supervised task), the goal is to **identify natural groupings** of people based on their eating habits, physical activity, and lifestyle choices — without using any target labels during training.
+This project applies **unsupervised machine learning** to discover hidden lifestyle profiles within a population dataset of 2,103 individuals. Rather than predicting obesity labels (a supervised task), the goal is to **identify natural groupings** of people based on their eating habits, physical activity, and lifestyle choices , without using any target labels during training.
 
 The obesity labels (`NObeyesdad`) are used **only after clustering** to validate and interpret the discovered groups.
 
@@ -35,7 +35,9 @@ The obesity labels (`NObeyesdad`) are used **only after clustering** to validate
 |---|---|
 | **Business Goal** | Understand distinct lifestyle and eating behavior patterns associated with obesity risk |
 | **Technical Goal** | Apply clustering algorithms (KMeans, Hierarchical, DBSCAN) to segment individuals |
-| **Key Question** | *Can we identify distinct lifestyle profiles from behavioral data alone — without using obesity labels?* |
+| **Key Question** | *Can we identify distinct lifestyle profiles from behavioral data alone  without using obesity labels?*
+*What eating and activity patterns characterize different population segments?*
+|
 
 **Why this matters:**
 - Enables targeted health interventions for specific lifestyle groups
@@ -48,7 +50,7 @@ The obesity labels (`NObeyesdad`) are used **only after clustering** to validate
 
 | Property | Value |
 |---|---|
-| **Source** | [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition) |
+| **Source** | [UCI Machine Learning Repository]
 | **Instances** | 2,174 (raw) → 2,103 (after cleaning) |
 | **Features** | 17 columns (16 features + 1 target) |
 | **Type** | Mixed — numerical + categorical |
@@ -65,6 +67,27 @@ The obesity labels (`NObeyesdad`) are used **only after clustering** to validate
 | **Transportation** | `MTRANS` |
 | **Target (post-clustering only)** | `NObeyesdad` |
 
+### Feature Details
+
+| Feature | Description | Values |
+|---------|-------------|--------|
+| **Gender** | Biological sex | Male / Female |
+| **Age** | Age in years | Numerical |
+| **Height** | Height in meters | Numerical |
+| **Weight** | Weight in kg | Numerical |
+| **family_history_with_overweight** | Genetic risk factor | Yes / No |
+| **FAVC** | Frequent high-calorie food consumption | Yes / No |
+| **FCVC** | Vegetable consumption frequency | 1 (low) → 3 (high) |
+| **NCP** | Number of main meals per day | Numerical |
+| **CAEC** | Snacking between meals | No / Sometimes / Frequently / Always |
+| **CH2O** | Daily water intake | 1 (low) → 3 (high) |
+| **SMOKE** | Smoking status | Yes / No |
+| **SCC** | Calorie consumption monitoring | Yes / No |
+| **FAF** | Physical activity frequency | 0 (low) → 3 (high) |
+| **TUE** | Daily screen time | 0 (low) → 2 (high) |
+| **CALC** | Alcohol consumption | No / Sometimes / Frequently |
+| **MTRANS** | Primary transportation mode | Walking / Bike / Public_Transportation / Automobile |
+
 ### Engineered Features
 
 | Feature | Formula | Meaning |
@@ -75,27 +98,7 @@ The obesity labels (`NObeyesdad`) are used **only after clustering** to validate
 
 ---
 
-## 🗂 Project Structure
 
-```
-Obesity_Clustering_Project/
-│
-├── data/
-│   └── raw/
-│       └── obesity_raw.csv            ← Original UCI dataset
-│
-├── notebooks/
-│   ├── 01_EDA.ipynb                   ← Exploratory Data Analysis (draft)
-│   └── 02_Modeling.ipynb              ← Preprocessing, Feature Engineering & Modeling (draft)
-│
-├── app.py                             ← Streamlit deployment application
-├── requirements.txt                   ← Python dependencies
-├── README.md                          ← This file
-├── Presentation.pdf                   ← Soutenance slides (7 slides)
-└── .gitignore
-```
-
----
 
 ## 🔬 Methodology
 
@@ -162,7 +165,7 @@ X_scaled = StandardScaler().fit_transform(X_encoded)  # Critical for distance-ba
 
 #### Model 2 — Hierarchical Clustering (Agglomerative)
 - **Three linkages tested**: Ward (0.1301), Complete (0.6507*), Average (0.6507*)
-- **Ward chosen**: Complete linkage achieved inflated silhouette by pushing 2,096/2,103 points into one cluster (degenerate result — not meaningful)
+- **Ward chosen**: Complete linkage achieved inflated silhouette by pushing 2,096/2,103 points into one cluster (degenerate result /  not meaningful)
 - **Dendrogram**: 200-sample subset used for visualization; threshold = 0.7 × max distance
 
 #### Model 3 — DBSCAN
@@ -185,7 +188,7 @@ X_scaled = StandardScaler().fit_transform(X_encoded)  # Critical for distance-ba
 | **3** | 45 (2.2%) | 🏃 Young & Very Active | 1.91 / 3 | 2.69 / 3 | Normal Weight (60%) |
 
 **Cluster interpretations:**
-- **Cluster 0**: The dominant group — high FAVC (89%), frequent snacking, moderate activity, family history of overweight. Strongly linked to obesity.
+- **Cluster 0**: The dominant group : high FAVC (89%), frequent snacking, moderate activity, family history of overweight. Strongly linked to obesity.
 - **Cluster 1**: Older individuals (avg 28y), 100% consume alcohol "sometimes", no abstainers. Highest share of Obesity Type II.
 - **Cluster 2**: Lowest risk score, no frequent snacking, highest activity — the healthiest behavioral profile despite mild overweight.
 - **Cluster 3**: Youngest group (avg 20.8y), very active (Activity Score 2.69), lowest high-calorie food intake (60%). Predominantly Normal Weight.
@@ -219,29 +222,15 @@ X_scaled = StandardScaler().fit_transform(X_encoded)  # Critical for distance-ba
 
 ---
 
-## 💡 Key Findings
 
-1. **Unsupervised clustering successfully recovers lifestyle-relevant groups** — the discovered clusters align meaningfully with the obesity labels when cross-tabulated, validating the approach.
-
-2. **Dietary risk and activity level are the primary differentiators** — the engineered `Risk_Score` and `Activity_Score` features are among the top drivers of cluster separation.
-
-3. **Two clusters are "healthy exceptions"** (clusters 2 and 3, ~4.4% of population combined) — small but meaningful minorities showing that healthy behavior patterns exist and are identifiable.
-
-4. **The majority cluster (Cluster 0, 93%) is a warning signal** — nearly the entire dataset shares high dietary risk and low activity, suggesting this is a population with broad obesity risk exposure.
-
-5. **Hierarchical clustering with "complete" linkage produces a misleading silhouette score** — 0.6507 appears excellent but hides a degenerate 2,096 vs 7 split. Always inspect cluster sizes alongside metric scores.
-
----
 
 ## 🌐 Streamlit Application
 
 An interactive web application allows users to:
 - Upload the dataset and explore it interactively
-- Tune DBSCAN parameters (eps, min_samples) via sliders
 - View cluster profiles, heatmaps, radar charts, and PCA scatter plots
 - **Predict which cluster their own profile belongs to** using k-NN majority vote
 
-**Bonus: +2 pts** — deployed as part of the project assessment.
 
 ```bash
 streamlit run app.py
@@ -291,10 +280,10 @@ jupyter>=1.0.0
 
 ## 👤 Author
 
-**[Your Name]** — ML Project · 2024/2025  
-Supervised by: [Teacher Name]  
-Dataset: [UCI Obesity Dataset](https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition)
+**[Manar El Fakih Romdhane]** — ML Project · 2025/2026  
+Supervised by: [Khemais Abdallah]  
+Dataset: [UCI Obesity Dataset]
 
 ---
 
-*This project was developed as part of a Machine Learning course. The obesity labels were used exclusively for post-clustering interpretation — not as training targets.*
+*This project was developed as part of a Machine Learning course. The obesity labels were used exclusively for post-clustering interpretation , not as training targets.*
